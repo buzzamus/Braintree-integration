@@ -1,0 +1,20 @@
+<h1>Checkout</h1>
+
+<div id="dropin-container"></div>
+  <button id="submit-button">Request payment method</button>
+
+<script src="https://js.braintreegateway.com/web/dropin/1.2.0/js/dropin.min.js"></script>
+<script>
+  var button = document.querySelector('#submit-button');
+
+  braintree.dropin.create({
+    authorization: 'CLIENT_TOKEN_FROM_SERVER',
+    container: '#dropin-container'
+  }, function (createErr, instance) {
+    button.addEventListener('click', function () {
+      instance.requestPaymentMethod(function (err, payload) {
+        // Submit payload.nonce to your server
+      });
+    });
+  });
+</script>
