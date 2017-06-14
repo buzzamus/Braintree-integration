@@ -1,0 +1,10 @@
+<h1>Onboarding Application</h1>
+<div class="center">
+  <%= form_for(merchant_account_params, :html => {class: "center", role: "form"}) do |f| %>
+    <div class="center">
+      <%= f.label :firstname %>
+      <%= f.text_field :firstname, class: "middle" %>
+    </div>
+    <%= f.submit %>
+  <% end %>
+</div>
