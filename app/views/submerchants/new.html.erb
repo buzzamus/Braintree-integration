@@ -2,9 +2,15 @@
 <div class="center">
   <%= form_for(merchant_account_params, :html => {class: "center", role: "form"}) do |f| %>
     <div class="center">
-      <%= f.label :firstname %>
-      <%= f.text_field :firstname, class: "middle" %>
+      <%= f.label "id" %>
+      <%= f.text_field merchant_account_params[:id], class: "middle" %>
+    </div>
+
+    <div class="center">
+      <%= f.label "first name" %>
+      <%= f.text_field merchant_account_params[:first_name], class: "middle" %>
     </div>
     <%= f.submit %>
   <% end %>
 </div>
+<script src="https://js.braintreegateway.com/web/3.18.0/js/client.min.js"></script>

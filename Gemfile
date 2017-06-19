@@ -31,6 +31,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'dotenv', '~> 2.2.1'
 gem "braintree", "~> 2.76.0"
+gem 'figaro', '~> 1.1', '>= 1.1.1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -17,4 +17,11 @@
       });
     });
   });
+
+  braintree.dropin.create({
+  authorization: CLIENT_TOKEN_FROM_SERVER,
+  container: '#dropin-container'
+}, function (err, instance) {
+  /* ... */
+});
 </script>
