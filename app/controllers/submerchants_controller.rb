@@ -2,9 +2,9 @@ class SubmerchantsController < ApplicationController
 
   def new
 
-    merchant_account_params = {
-      :id => id,
-      :first_name => first_name
+    submerchant = {
+      :id => params[:id],
+      :first_name => params[:first_name]
     }
 
 
