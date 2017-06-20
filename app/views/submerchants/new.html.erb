@@ -1,15 +1,129 @@
-<h1>Onboarding Application</h1>
+<h1 class="center">Onboarding Application</h1>
+
 <div class="center">
-  <%= form_for(:submerchant, :html => {class: "center", role: "form"}) do |f| %>
+  <%= form_for(:merchant_account_params, url: {action: "create"}, :html => {class: "center", role: "form"}) do |f| %>
     <div class="center">
       <%= f.label "submerchant ID" %>
-      <%= f.text_field :id, class: "middle" %>
+      <%= f.text_field :id %>
     </div>
+
+    <h3>Personal Info</h3>
 
     <div class="center">
       <%= f.label "first name" %>
-      <%= f.text_field :first_name, class: "middle" %>
+      <%= f.text_field :first_name %>
     </div>
+
+    <div class="center">
+      <%= f.label "last name" %>
+      <%= f.text_field :last_name %>
+    </div>
+
+    <div class="center">
+      <%= f.label "email" %>
+      <%= f.text_field :email %>
+    </div>
+
+    <div class="center">
+      <%= f.label "phone number" %>
+      <%= f.text_field :phone %>
+    </div>
+
+    <div class="center">
+      <%= f.label "date of birth" %>
+      <%= f.text_field :date_of_birth %>
+    </div>
+    <div class="center">
+      <%= f.label "social" %>
+      <%= f.text_field :ssn %>
+    </div>
+
+    <h3 class="center">Address</h3>
+
+    <div class="center">
+      <%= f.label "street address" %>
+      <%= f.text_field :street_address %>
+    </div>
+
+    <div class="center">
+      <%= f.label "locality" %>
+      <%= f.text_field :locality %>
+    </div>
+
+    <div class="center">
+      <%= f.label "region" %>
+      <%= f.text_field :region %>
+    </div>
+
+    <div class="center">
+      <%= f.label "postal code" %>
+      <%= f.text_field :postal_code %>
+    </div>
+
+    <h3>Business Info</h3>
+
+    <div class="center">
+      <%= f.label "legal name" %>
+      <%= f.text_field :legal_name %>
+    </div>
+
+    <div class="center">
+      <%= f.label "DBA name" %>
+      <%= f.text_field :dba_name %>
+    </div>
+
+    <div class="center">
+      <%= f.label "tax ID" %>
+      <%= f.text_field :tax_id %>
+    </div>
+
+    <h5>Business Address</h5>
+
+    <div class="center">
+      <%= f.label "street address" %>
+      <%= f.text_field :business_street %>
+    </div>
+
+    <div class="center">
+      <%= f.label "locality" %>
+      <%= f.text_field :business_locality %>
+    </div>
+
+    <div class="center">
+      <%= f.label "region" %>
+      <%= f.text_field :business_region %>
+    </div>
+
+    <div class="center">
+      <%= f.label "postal code" %>
+      <%= f.text_field :business_postal_code %>
+    </div>
+
+    <h3>Funding Information</h3>
+
+    <div class="center">
+      <%= f.label "descriptor" %>
+      <%= f.text_field :descriptor %>
+    </div>
+
+    <div class="center">
+      <%= f.label "account number" %>
+      <%= f.text_field :account_number %>
+    </div>
+
+    <div class="center">
+      <%= f.label "routing number" %>
+      <%= f.text_field :routing_number %>
+    </div>
+    <br/>
+    <div class="center">
+      <%= f.label "Do you accept the Terms of Service?" %>
+      <%= f.check_box :tos %>
+
+
+    </div>
+
+
     <%= f.submit %>
   <% end %>
 </div>
