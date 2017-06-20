@@ -1,119 +1,137 @@
 <h1 class="center">Onboarding Application</h1>
+<div class="half-hr">
+   <hr/>
+ </div>
 
 <div class="center">
   <%= form_for(:merchant_account_params, url: {action: "create"}, :html => {class: "center", role: "form"}) do |f| %>
     <div class="center">
-      <%= f.label "submerchant ID" %>
-      <%= f.text_field :id %>
+      <%= f.label "submerchant ID" %><br/>
+      <%= f.text_field :id, class: "onboard-form" %>
     </div>
 
     <h3>Personal Info</h3>
-
-    <div class="center">
-      <%= f.label "first name" %>
-      <%= f.text_field :first_name %>
+    <div class="half-hr">
+      <hr/>
     </div>
 
     <div class="center">
-      <%= f.label "last name" %>
-      <%= f.text_field :last_name %>
+      <%= f.label "first name" %><br/>
+      <%= f.text_field :first_name, class: "onboard-form" %>
     </div>
 
     <div class="center">
-      <%= f.label "email" %>
-      <%= f.text_field :email %>
+      <%= f.label "last name" %><br/>
+      <%= f.text_field :last_name, class: "onboard-form" %>
     </div>
 
     <div class="center">
-      <%= f.label "phone number" %>
-      <%= f.text_field :phone %>
+      <%= f.label "email" %><br/>
+      <%= f.text_field :email, class: "onboard-form" %>
     </div>
 
     <div class="center">
-      <%= f.label "date of birth" %>
-      <%= f.text_field :date_of_birth %>
+      <%= f.label "phone number" %><br/>
+      <%= f.text_field :phone, class: "onboard-form" %>
+    </div>
+
+    <div class="center">
+      <%= f.label "date of birth" %><br/>
+      <%= f.text_field :date_of_birth, class: "onboard-form" %>
     </div>
     <div class="center">
-      <%= f.label "social" %>
-      <%= f.text_field :ssn %>
+      <%= f.label "social" %><br/>
+      <%= f.text_field :ssn, class: "onboard-form" %>
     </div>
 
     <h3 class="center">Address</h3>
-
-    <div class="center">
-      <%= f.label "street address" %>
-      <%= f.text_field :street_address %>
+    <div class="half-hr">
+      <hr/>
     </div>
 
     <div class="center">
-      <%= f.label "locality" %>
-      <%= f.text_field :locality %>
+      <%= f.label "street address" %><br/>
+      <%= f.text_field :street_address, class: "onboard-form" %>
     </div>
 
     <div class="center">
-      <%= f.label "region" %>
-      <%= f.text_field :region %>
+      <%= f.label "locality" %><br/>
+      <%= f.text_field :locality, class: "onboard-form" %>
     </div>
 
     <div class="center">
-      <%= f.label "postal code" %>
-      <%= f.text_field :postal_code %>
+      <%= f.label "region" %><br/>
+      <%= f.text_field :region, class: "onboard-form" %>
+    </div>
+
+    <div class="center">
+      <%= f.label "postal code" %><br/>
+      <%= f.text_field :postal_code, class: "onboard-form" %>
     </div>
 
     <h3>Business Info</h3>
-
-    <div class="center">
-      <%= f.label "legal name" %>
-      <%= f.text_field :legal_name %>
+    <div class="half-hr">
+      <hr/>
     </div>
 
     <div class="center">
-      <%= f.label "DBA name" %>
-      <%= f.text_field :dba_name %>
+      <%= f.label "legal name" %><br/>
+      <%= f.text_field :legal_name, class: "onboard-form" %>
     </div>
 
     <div class="center">
-      <%= f.label "tax ID" %>
-      <%= f.text_field :tax_id %>
+      <%= f.label "DBA name" %><br/>
+      <%= f.text_field :dba_name, class: "onboard-form" %>
+    </div>
+
+    <div class="center">
+      <%= f.label "tax ID" %><br/>
+      <%= f.text_field :tax_id, class: "onboard-form" %>
     </div>
 
     <h5>Business Address</h5>
-
-    <div class="center">
-      <%= f.label "street address" %>
-      <%= f.text_field :business_street %>
+    <div class="half-hr">
+      <hr/>
     </div>
 
     <div class="center">
-      <%= f.label "locality" %>
-      <%= f.text_field :business_locality %>
+      <%= f.label "street address" %><br/>
+      <%= f.text_field :business_street, class: "onboard-form" %>
     </div>
 
     <div class="center">
-      <%= f.label "region" %>
-      <%= f.text_field :business_region %>
+      <%= f.label "locality" %><br/>
+      <%= f.text_field :business_locality, class: "onboard-form" %>
     </div>
 
     <div class="center">
-      <%= f.label "postal code" %>
-      <%= f.text_field :business_postal_code %>
+      <%= f.label "region" %><br/>
+      <%= f.text_field :business_region, class: "onboard-form" %>
+    </div>
+
+    <div class="center">
+      <%= f.label "postal code" %><br/>
+      <%= f.text_field :business_postal_code, class: "onboard-form" %>
     </div>
 
     <h3>Funding Information</h3>
-
-    <div class="center">
-      <%= f.label "descriptor" %>
-      <%= f.text_field :descriptor %>
+    <div class="half-hr">
+      <hr/>
     </div>
 
     <div class="center">
-      <%= f.label "account number" %>
-      <%= f.text_field :account_number %>
+      <%= f.label "descriptor" %><br/>
+      <%= f.text_field :descriptor, class: "onboard-form" %>
     </div>
 
     <div class="center">
-      <%= f.label "routing number" %>
-      <%= f.text_field :routing_number %>
+      <%= f.label "account number" %><br/>
+      <%= f.text_field :account_number, class: "onboard-form" %>
+    </div>
+
+    <div class="center">
+      <%= f.label "routing number" %><br/>
+      <%= f.text_field :routing_number, class: "onboard-form" %>
     </div>
     <br/>
     <div class="center">

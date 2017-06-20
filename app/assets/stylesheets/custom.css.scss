@@ -1,3 +1,7 @@
+body {
+  background-color: #35dd8f
+}
+
 .center {
   text-align: center;
 }
@@ -5,4 +9,27 @@
 .middle {
   margin-left: 0 auto;
   margin-right: 0 auto;
+}
+
+.onboard-form {
+  width: 40%;
+  height: 50px;
+  border-radius: 28px;
+  font-size: 2em;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h1, h3, p, label {
+  font-family: Arial;
+}
+
+.half-hr {
+  margin-left: 23%;
+  width: 50%;
+}
+
+input[type=checkbox] {
+  transform: scale(2.0);
 }
