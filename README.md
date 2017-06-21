@@ -1,25 +1,18 @@
 # README
 
-My Braintree Sandbox Integration
+My Braintree Marketplace Sandbox Integration
 
-Things you may want to cover:
-
-* Ruby version
+* Ruby version 2.4.0
 
 * System dependencies
-  * BT JS version
+  * BT JS SDK version 3.18.0
   * BT Ruby SDK version 2.76.0
 
 * Configuration
+  * run bundle install
+  * create application.yml (if it doesn't automatically install from figaro gem)
+  * in application.yml copy and paste the following with your Braintree credentials:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  BRAINTREE_MERCHANT_ID: 'YOURMERCHANTID'
+  BRAINTREE_PUBLIC_KEY: 'YOURPUBLICKEY'
+  BRAINTREE_PRIVATE_KEY: 'YOURPRIVATEKEY'
