@@ -11,10 +11,12 @@ My Braintree Marketplace Sandbox Integration
   * BT Ruby SDK version 2.76.0
 
 * Configuration
-  * run bundle install
-  * create application.yml within the config folder(if it doesn't automatically install from figaro gem)
+  * run `bundle install`
+  * create an **application.yml** file within the config folder(if it doesn't automatically install from figaro gem)
   * in application.yml copy and paste the following with your Braintree credentials:
 
-    BRAINTREE_MERCHANT_ID: 'YOURMERCHANTID'
-    BRAINTREE_PUBLIC_KEY: 'YOURPUBLICKEY'
-    BRAINTREE_PRIVATE_KEY: 'YOURPRIVATEKEY'
+    ```ruby
+     BRAINTREE_MERCHANT_ID: 'YOURMERCHANTID'
+     BRAINTREE_PUBLIC_KEY: 'YOURPUBLICKEY'
+     BRAINTREE_PRIVATE_KEY: 'YOURPRIVATEKEY'
+     ```
