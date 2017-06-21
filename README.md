@@ -21,4 +21,10 @@ My Braintree Marketplace Sandbox Integration
      BRAINTREE_PRIVATE_KEY: 'YOURPRIVATEKEY'
      ```
   
-  *  in the `submerchants_controller.rb` file enter in your master merchant ID under the value of the        `:master_merchant_account_id` hash
+  * in the `submerchants_controller.rb` file enter in your master merchant ID under the value of the        `:master_merchant_account_id` hash
+  
+   example: 
+   
+   ```ruby
+   :master_merchant_account_id => "mymastermerchantaccountid",
+   ```
