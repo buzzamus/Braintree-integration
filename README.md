@@ -12,7 +12,7 @@ My Braintree Marketplace Sandbox Integration
 
 * Configuration
   * run bundle install
-  * create application.yml (if it doesn't automatically install from figaro gem)
+  * create application.yml within the config folder(if it doesn't automatically install from figaro gem)
   * in application.yml copy and paste the following with your Braintree credentials:
 
     BRAINTREE_MERCHANT_ID: 'YOURMERCHANTID'
