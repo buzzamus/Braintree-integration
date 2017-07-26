@@ -38,17 +38,27 @@ class SubmerchantsController < ApplicationController
         :routing_number => params[:merchant_account_params][:routing_number]
       },
       :id => params[:merchant_account_params][:id],
-      :master_merchant_account_id => "INSERT MERCH ACCOUNT HERE!!!!!!",
+      :master_merchant_account_id => "YOUR MASTER MERCHANT ACCOUNT ID HERE!!!!",
       :tos_accepted => params[:merchant_account_params][:tos]
     }
     puts params
     puts merchant_account_params
     result = Braintree::MerchantAccount.create(merchant_account_params)
-    puts result
-    result.errors.each do |error|
-      puts error.attribute
-      puts error.code
-      puts error.message
+
+    if result.success?
+      puts result.merchant_account.status
+      redirect_to root_path
+    else
+      error_messages = result.errors.map { |error| "Error: #{error.code}: #{error.message}"}
+      flash[:error] = error_messages
+      puts result
+
+      result.errors.each do |error|
+        puts error.attribute
+        puts error.code
+        puts error.message
+      end
+      render 'new'
     end
 
   end
