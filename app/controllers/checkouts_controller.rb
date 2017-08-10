@@ -4,6 +4,10 @@ class CheckoutsController < ApplicationController
     @client_token = Braintree::ClientToken.generate
   end
 
+  def show
+    @transaction = Braintree::Transaction.find(params[:id])
+  end
+
   def create
     amount = "10.00"
      nonce = params["payment_method_nonce"]
@@ -16,9 +20,14 @@ class CheckoutsController < ApplicationController
        }
      )
 
+     if result.success? || result.transaction
+       redirect_to checkout_path(result.transaction.id)
+     else
+       error_messages = result.errors.map { |error| "Error: #{error.code}: #{error.message}"}
+
      puts result
      puts result.params
-     puts result.errors
+   end
 
   end
 

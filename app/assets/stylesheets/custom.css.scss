@@ -12,7 +12,7 @@ body {
 }
 
 .onboard-form {
-  width: 40%;
+  width: 80%;
   height: 50px;
   border-radius: 28px;
   font-size: 2em;
@@ -32,4 +32,26 @@ h1, h3, p, label {
 
 input[type=checkbox] {
   transform: scale(2.0);
+}
+
+.btn-dropin {
+  background-color: #ccbc2c;
+  width: 200px;
+  height: 35px;
+  border-radius: 12px;
+}
+
+.btn-dropin:hover {
+  background-color: #949633;
+}
+
+.btn-theme {
+  background-color: #ea8912;
+  width: 160px;
+  height: 40px;
+  border-radius: 12px;
+}
+
+.btn-theme:hover {
+  background-color: #ea5815;
 }
