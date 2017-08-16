@@ -7,8 +7,9 @@ My Braintree Marketplace Sandbox Integration
 * Rails version 5.1
 
 * System dependencies
-  * BT JS SDK version 3.18.0
-  * BT Ruby SDK version 2.76.0
+  * Braintree JS SDK version 3.18.0
+  * Braintree Ruby SDK version 2.76.0
+  * Braintree Drop-in v1.2 (JS v3 Drop-in UI)
 
 * Configuration
   * run `bundle install`
@@ -20,11 +21,11 @@ My Braintree Marketplace Sandbox Integration
      BRAINTREE_PUBLIC_KEY: 'YOURPUBLICKEY'
      BRAINTREE_PRIVATE_KEY: 'YOURPRIVATEKEY'
      ```
-  
+
   * in the `submerchants_controller.rb` file enter in your master merchant ID under the value of the        `:master_merchant_account_id` hash
-  
-   example: 
-   
+
+   example:
+
    ```ruby
    :master_merchant_account_id => "mymastermerchantaccountid",
    ```
