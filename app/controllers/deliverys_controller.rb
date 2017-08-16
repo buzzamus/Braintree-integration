@@ -1,8 +1,8 @@
-class CheckoutsController < ApplicationController
+class DeliverysController < ApplicationController
 
   def new
     @client_token = Braintree::ClientToken.generate
-    @amount = "$10.00"
+    @deliveryamount = "$13.00"
   end
 
   def show
@@ -10,12 +10,14 @@ class CheckoutsController < ApplicationController
   end
 
   def create
-    @amount = "10.00"
+    @deliveryamount = "13.00"
     nonce = params["payment_method_nonce"]
 
     result = Braintree::Transaction.sale(
-      amount: @amount,
+      amount: @deliveryamount,
       payment_method_nonce: nonce,
+      merchant_account_id: "mehpizzastore_42", #put your sub-merchant ID here
+      service_fee_amount: "3.00",
       :options => {
         :submit_for_settlement => true
       }
