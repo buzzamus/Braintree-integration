@@ -1,0 +1,125 @@
+/* line 1, /Users/buzzamus/Desktop/Braintree-integration/app/assets/stylesheets/custom.css.scss */
+body {
+  background-color: #35dd8f;
+}
+
+/* line 5, /Users/buzzamus/Desktop/Braintree-integration/app/assets/stylesheets/custom.css.scss */
+.center {
+  text-align: center;
+}
+
+/* line 9, /Users/buzzamus/Desktop/Braintree-integration/app/assets/stylesheets/custom.css.scss */
+.middle {
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+}
+
+/* line 14, /Users/buzzamus/Desktop/Braintree-integration/app/assets/stylesheets/custom.css.scss */
+.onboard-form {
+  width: 80%;
+  height: 50px;
+  border-radius: 28px;
+  font-size: 2em;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 24, /Users/buzzamus/Desktop/Braintree-integration/app/assets/stylesheets/custom.css.scss */
+h1, h3, p, label {
+  font-family: Arial;
+}
+
+/* line 28, /Users/buzzamus/Desktop/Braintree-integration/app/assets/stylesheets/custom.css.scss */
+.half-hr {
+  margin-left: 23%;
+  width: 50%;
+}
+
+/* line 33, /Users/buzzamus/Desktop/Braintree-integration/app/assets/stylesheets/custom.css.scss */
+input[type=checkbox] {
+  transform: scale(2);
+}
+
+/* line 37, /Users/buzzamus/Desktop/Braintree-integration/app/assets/stylesheets/custom.css.scss */
+.btn-dropin {
+  background-color: #ccbc2c;
+  width: 200px;
+  height: 35px;
+  border-radius: 12px;
+}
+
+/* line 44, /Users/buzzamus/Desktop/Braintree-integration/app/assets/stylesheets/custom.css.scss */
+.btn-dropin:hover {
+  background-color: #949633;
+}
+
+/* line 48, /Users/buzzamus/Desktop/Braintree-integration/app/assets/stylesheets/custom.css.scss */
+.btn-theme {
+  background-color: #ea8912;
+  width: 160px;
+  height: 40px;
+  border-radius: 12px;
+}
+
+/* line 55, /Users/buzzamus/Desktop/Braintree-integration/app/assets/stylesheets/custom.css.scss */
+.btn-theme:hover {
+  background-color: #ea5815;
+}
+
+/* line 59, /Users/buzzamus/Desktop/Braintree-integration/app/assets/stylesheets/custom.css.scss */
+.btn-red {
+  background-color: #aa2929;
+  border: 1px solid white;
+  color: white;
+  width: 300px;
+  height: 30px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-size: 1em;
+  display: inline-block;
+}
+
+/* line 73, /Users/buzzamus/Desktop/Braintree-integration/app/assets/stylesheets/custom.css.scss */
+.btn:hover {
+  color: black;
+}
+
+/* line 77, /Users/buzzamus/Desktop/Braintree-integration/app/assets/stylesheets/custom.css.scss */
+.btn-red:hover {
+  background-color: #a05f59;
+  text-decoration: none;
+}
+
+/* line 82, /Users/buzzamus/Desktop/Braintree-integration/app/assets/stylesheets/custom.css.scss */
+.top-pad {
+  padding-top: 16px;
+}
+
+/* line 86, /Users/buzzamus/Desktop/Braintree-integration/app/assets/stylesheets/custom.css.scss */
+.top-marg {
+  margin-top: 30px;
+}
+
+/* line 90, /Users/buzzamus/Desktop/Braintree-integration/app/assets/stylesheets/custom.css.scss */
+.bottom-marg {
+  margin-bottom: 50px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+

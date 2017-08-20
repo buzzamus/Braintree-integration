@@ -29,3 +29,11 @@ My Braintree Marketplace Sandbox Integration
    ```ruby
    :master_merchant_account_id => "mymastermerchantaccountid",
    ```
+
+   * in the `deliverys_controller.rb` file enter in a sub-merchant ID for the transaction.sale() call `merchant_account_id` parameter's value (this only applies to Marketplace gateways).
+
+   example:
+
+   ```ruby
+   merchant_account_id => "your_submerchant_id_here"
+   ```

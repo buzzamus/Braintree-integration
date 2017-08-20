@@ -24,7 +24,7 @@ class DeliverysController < ApplicationController
     )
 
     if result.success? || result.transaction
-      redirect_to checkout_path(result.transaction.id)
+      redirect_to delivery_path(result.transaction.id)
     else
       error_messages = result.errors.map { |error| "Error: #{error.code}: #{error.message}"}
 
