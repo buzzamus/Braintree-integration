@@ -80,7 +80,7 @@ input[type=checkbox] {
 }
 
 .top-pad {
-padding-top: 16px;
+padding-top: 13px;
 }
 
 .top-marg {
@@ -89,4 +89,13 @@ padding-top: 16px;
 
 .bottom-marg {
   margin-bottom: 50px;
+}
+
+.home-btn {
+  text-decoration: none;
+  color: #aa2929;
+}
+
+.home-btn:hover {
+  color: #a05f59;
 }

@@ -38,7 +38,7 @@ class SubmerchantsController < ApplicationController
         :routing_number => params[:merchant_account_params][:routing_number]
       },
       :id => params[:merchant_account_params][:id],
-      :master_merchant_account_id => "YOUR MASTER MERCHANT ACCOUNT ID HERE!!!!",
+      :master_merchant_account_id => "busbysolutionsinc", #your master merchant ID goes here
       :tos_accepted => params[:merchant_account_params][:tos]
     }
     puts params
@@ -47,7 +47,7 @@ class SubmerchantsController < ApplicationController
 
     if result.success?
       puts result.merchant_account.status
-      redirect_to root_path
+      redirect_to submerchant_path(result.merchant_account.id)
     else
       error_messages = result.errors.map { |error| "Error: #{error.code}: #{error.message}"}
       flash[:error] = error_messages
@@ -61,5 +61,9 @@ class SubmerchantsController < ApplicationController
       render 'new'
     end
 
+  end
+
+  def show
+    @submerchant = Braintree::MerchantAccount.find(params[:id])
   end
 end
