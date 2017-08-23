@@ -10,8 +10,8 @@
   </head>
 
   <body>
-    <h2><%= link_to "Home", root_path, class: "home-btn" %></h2>
-    <hr/>
+    <%= render 'layouts/nav' %>
+    <%= render 'layouts/messages' %>
     <%= yield %>
     <script src="https://js.braintreegateway.com/web/dropin/1.2.0/js/dropin.min.js"></script>
   </body>

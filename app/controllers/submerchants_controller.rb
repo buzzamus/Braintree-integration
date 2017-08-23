@@ -1,5 +1,10 @@
 class SubmerchantsController < ApplicationController
 
+  def index
+    @gateway = Braintree::Configuration.gateway
+    @submerchants = @gateway.merchant_account.all
+  end
+
   def new
   end
 
@@ -50,7 +55,8 @@ class SubmerchantsController < ApplicationController
       redirect_to submerchant_path(result.merchant_account.id)
     else
       error_messages = result.errors.map { |error| "Error: #{error.code}: #{error.message}"}
-      flash[:error] = error_messages
+      flash[:failure] = error_messages
+      redirect_to new_submerchant_path
       puts result
 
       result.errors.each do |error|
@@ -58,7 +64,6 @@ class SubmerchantsController < ApplicationController
         puts error.code
         puts error.message
       end
-      render 'new'
     end
 
   end
@@ -66,4 +71,14 @@ class SubmerchantsController < ApplicationController
   def show
     @submerchant = Braintree::MerchantAccount.find(params[:id])
   end
+
+  def edit
+    #create a page where sub-merchant puts in their id, then that id is stored in a current_sub method
+    #current sub is then used with submerchant.find(current_sub)...or something like that...
+  end
+
+  def update
+    #same as above
+  end
+
 end

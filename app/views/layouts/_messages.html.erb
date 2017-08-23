@@ -1,0 +1,10 @@
+<div class="center">
+
+  <% flash.each do |name, msg| %>
+
+    <div class="<%= name %>">
+      <a href="#" class="close">&#215;</a>
+      <%= msg %>
+    </div>
+  <% end %>
+</div>

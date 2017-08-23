@@ -91,11 +91,31 @@ padding-top: 13px;
   margin-bottom: 50px;
 }
 
-.home-btn {
+.nav-btn {
   text-decoration: none;
   color: #aa2929;
 }
 
-.home-btn:hover {
+.nav-btn:hover {
   color: #a05f59;
+  text-decoration: underline;
+}
+
+.failure {
+  width: 40%;
+  padding-top: 4px;
+  padding-bottom: 30px;
+  background-color: #c15349;
+  border-radius: 6px;
+  margin-left: 30%;
+}
+
+.close {
+  float: right;
+  margin-right: 6px;
+  margin-top: -5px;
+}
+
+.right-space {
+  margin-right: 12px;
 }

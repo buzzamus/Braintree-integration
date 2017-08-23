@@ -1,0 +1,6 @@
+<% @submerchants.merchant_accounts.each do |merch| %>
+<div class="center">
+  <h3><%= link_to merch.id, submerchant_path(merch.id) %></h3>
+  <p><%= merch.status %></p>
+</div>
+<% end %>

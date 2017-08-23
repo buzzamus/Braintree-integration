@@ -1,0 +1,13 @@
+<% if obj.errors.any? %>
+  <div class="center">
+    <div class="failure">
+      <h2 class="center">
+        <%= pluralize(obj.errors.count, "error") %> caused this <%= obj.class %> from being successful
+      </h2>
+      <% obj.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </div>
+  </div>
+
+<% end %>
