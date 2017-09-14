@@ -1,6 +1,12 @@
 <div class="center">
-
-<h1>Your sub-merchant ID: <%= @submerchant.id %></h1>
-<h3>Status: <%= @submerchant.status %></h3>
-
+  <h1>Your sub-merchant ID: <%= @submerchant.id %></h1>
+  <h3>Status: <%= @submerchant.status %></h3>
+  <p>Business Name: <%= @submerchant.business_details.dba_name %></p>
+  <p>Currency: <%= @submerchant.currency_iso_code %></p>
+  <p>Name:
+    <span><%= @submerchant.individual_details.first_name %></span>
+    <span><%= @submerchant.individual_details.last_name %></span>
+  </p>
+  <p><%= @submerchant.individual_details.phone %></p>
+  <p><%= @submerchant.individual_details.email %></p>
 </div>

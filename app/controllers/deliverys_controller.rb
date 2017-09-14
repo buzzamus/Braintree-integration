@@ -16,7 +16,7 @@ class DeliverysController < ApplicationController
     result = Braintree::Transaction.sale(
       amount: @deliveryamount,
       payment_method_nonce: nonce,
-      merchant_account_id: "mehpizzastore_42", #put your sub-merchant ID here
+      merchant_account_id: "mehpizzastore_42", # <---- put your sub-merchant ID here
       service_fee_amount: "3.00",
       :options => {
         :submit_for_settlement => true

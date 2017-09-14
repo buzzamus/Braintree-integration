@@ -1,15 +1,5 @@
-<h1 class="center">Onboarding Application</h1>
-<div class="half-hr">
-   <hr/>
- </div>
-
 <div class="center">
-  <%= form_for(:merchant_account_params, url: {action: "create"}, :html => {class: "center", role: "form"}) do |f| %>
-    <div class="center">
-      <%= f.label "submerchant ID (max 32 characters)" %><br/>
-      <%= f.text_field :id, class: "onboard-form" %>
-    </div>
-
+  <%= form_for(edit_submerchant_path(@submerchant), url: {action: "update"}, :html => {class: "center", role: "form"}) do |f| %>
     <h3>Personal Info</h3>
     <div class="half-hr">
       <hr/>
@@ -134,15 +124,9 @@
       <%= f.text_field :routing_number, class: "onboard-form" %>
     </div>
     <br/>
-    <div class="center">
-      <%= f.label "Do you accept the Terms of Service?" %>
-      <%= f.check_box :tos %>
 
 
-    </div>
-
-
-    <%= f.submit "Submit Sub-merchant Application", class: "btn-red bottom-marg top-marg" %>
+    <%= f.submit "Submit Update", class: "btn-red bottom-marg top-marg" %>
   <% end %>
 </div>
 <script src="https://js.braintreegateway.com/web/3.18.0/js/client.min.js"></script>

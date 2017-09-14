@@ -22,7 +22,7 @@ body {
 }
 
 h1, h3, p, label {
-  font-family: Arial;
+  font-family: Impact, sans-serif;
 }
 
 .half-hr {
@@ -68,6 +68,7 @@ input[type=checkbox] {
   text-decoration: none;
   font-size: 1em;
   display: inline-block;
+  font-family: Arial;
 }
 
 .btn:hover {
@@ -94,6 +95,7 @@ padding-top: 13px;
 .nav-btn {
   text-decoration: none;
   color: #aa2929;
+  font-family: Impact, sans-serif;
 }
 
 .nav-btn:hover {
@@ -118,4 +120,8 @@ padding-top: 13px;
 
 .right-space {
   margin-right: 12px;
+}
+
+right-float {
+  float: right;
 }
