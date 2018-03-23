@@ -7,6 +7,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'jalapeno', '~> 1.0'
 gem 'rails', '~> 5.1.1'
 # Use sqlite3 as the database for Active Record
 # Use Puma as the app server

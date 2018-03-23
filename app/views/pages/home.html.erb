@@ -11,11 +11,18 @@
 
   <div>
     <h3>Order a Pizza for Delivery ($13)</h3>
-    <p><%= link_to "Place Delivery Order", new_delivery_path, class: "btn-red top-pad" %></p>
+    <p>
+    <%= link_to "Place Delivery Order", new_delivery_path, class: "btn-red top-pad" %>
+    </p>
   </div>
 
   <div>
     <h3>Want a job delivering pizzas?!</h3>
     <%= link_to "Apply to be a sub-merchant", new_submerchant_path, class: "btn-red top-pad" %>
+  </div>
+
+  <div class="center top-marg">
+	  <p>Shameless plug section: check out this random quote generator Ruby Gem, Jalapeno:</p>
+	  <p><%= @quote %></p>
   </div>
 </div>

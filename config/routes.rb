@@ -8,5 +8,5 @@ Rails.application.routes.draw do
 
   resources :deliverys, only: [:new, :create, :show]
 
-  resources :submerchants
+  resources :submerchants, except: [:destroy]
 end

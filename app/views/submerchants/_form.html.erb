@@ -1,5 +1,6 @@
 <div class="center">
-  <%= form_for(edit_submerchant_path(@submerchant), url: {action: "update"}, :html => {class: "center", role: "form"}) do |f| %>
+
+  <%= form_for(submerchants_path(@submerchant), url: submerchants_path, :html => {class: "center", role: "form"}) do |f| %>
     <h3>Personal Info</h3>
     <div class="half-hr">
       <hr/>
@@ -128,5 +129,6 @@
 
     <%= f.submit "Submit Update", class: "btn-red bottom-marg top-marg" %>
   <% end %>
+  
 </div>
 <script src="https://js.braintreegateway.com/web/3.18.0/js/client.min.js"></script>

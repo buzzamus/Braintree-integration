@@ -25,7 +25,6 @@ class CheckoutsController < ApplicationController
       redirect_to checkout_path(result.transaction.id)
     else
       error_messages = result.errors.map { |error| "Error: #{error.code}: #{error.message}"}
-
     puts result
     puts result.params
     end

@@ -9,7 +9,6 @@ class SubmerchantsController < ApplicationController
   end
 
   def create
-
     merchant_account_params = {
       :individual => {
         :first_name => params[:merchant_account_params][:first_name],
@@ -64,6 +63,7 @@ class SubmerchantsController < ApplicationController
         puts error.code
         puts error.message
       end
+      
     end
 
   end
@@ -80,41 +80,41 @@ class SubmerchantsController < ApplicationController
   end
 
   def update
-    @submerchant = Braintree::MerchantAccount.find(params[:id])
-      update_merchant_account_params = {
-        :individual => {
-          :first_name => params[:merchant_account_params][:first_name],
-          :last_name => params[:merchant_account_params][:last_name],
-          :email => params[:merchant_account_params][:email],
-          :phone => params[:merchant_account_params][:phone],
-          :date_of_birth => params[:merchant_account_params][:date_of_birth],
-          :ssn => params[:merchant_account_params][:ssn],
-          :address => {
-            :street_address => params[:merchant_account_params][:street_address],
-            :locality => params[:merchant_account_params][:locality],
-            :region => params[:merchant_account_params][:region],
-            :postal_code => params[:merchant_account_params][:postal_code]
-          }
-        },
-        :business => {
-          :legal_name => params[:merchant_account_params][:legal_name],
-          :dba_name => params[:merchant_account_params][:dba_name],
-          :tax_id => params[:merchant_account_params][:tax_id],
-          :address => {
-            :street_address => params[:merchant_account_params][:business_street],
-            :locality => params[:merchant_account_params][:business_locality],
-            :region => params[:merchant_account_params][:business_region],
-            :postal_code => params[:merchant_account_params][:business_postal_code]
-          }
-        },
-        :funding => {
-          :descriptor => params[:merchant_account_params][:descriptor],
-          :destination => Braintree::MerchantAccount::FundingDestination::Bank,
-          :account_number => params[:merchant_account_params][:account_number],
-          :routing_number => params[:merchant_account_params][:routing_number]
-        },
+    @submerchant = Braintree::MerchantAccount.find(@submerchant.id)
+    result = Braintree::MerchantAccount.update(
+      @submerchant.id,
+      :individual => {
+        :first_name => params[:merchant_account_params][:first_name],
+        :last_name => params[:merchant_account_params][:last_name],
+        :email => params[:merchant_account_params][:email],
+        :phone => params[:merchant_account_params][:phone],
+        :date_of_birth => params[:merchant_account_params][:date_of_birth],
+        :ssn => params[:merchant_account_params][:ssn],
+        :address => {
+          :street_address => params[:merchant_account_params][:street_address],
+          :locality => params[:merchant_account_params][:locality],
+          :region => params[:merchant_account_params][:region],
+          :postal_code => params[:merchant_account_params][:postal_code]
+        }
+      },
+      :business => {
+        :legal_name => params[:merchant_account_params][:legal_name],
+        :dba_name => params[:merchant_account_params][:dba_name],
+        :tax_id => params[:merchant_account_params][:tax_id],
+        :address => {
+          :street_address => params[:merchant_account_params][:business_street],
+          :locality => params[:merchant_account_params][:business_locality],
+          :region => params[:merchant_account_params][:business_region],
+          :postal_code => params[:merchant_account_params][:business_postal_code]
+        }
+      },
+      :funding => {
+        :descriptor => params[:merchant_account_params][:descriptor],
+        :destination => Braintree::MerchantAccount::FundingDestination::Bank,
+        :account_number => params[:merchant_account_params][:account_number],
+        :routing_number => params[:merchant_account_params][:routing_number]
       }
-    result = Braintree::MerchantAccount.update(@submerchant.id, update_merchant_account_params)
+    )
     puts params
     puts update_merchant_account_params
 
