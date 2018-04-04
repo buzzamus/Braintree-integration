@@ -42,7 +42,7 @@ class SubmerchantsController < ApplicationController
         :routing_number => params[:merchant_account_params][:routing_number]
       },
       :id => params[:merchant_account_params][:id],
-      :master_merchant_account_id => "busbysolutionsinc", #your master merchant ID goes here
+      :master_merchant_account_id => "YourMasterMerchantAccount", #your master merchant ID goes here
       :tos_accepted => params[:merchant_account_params][:tos]
     }
     puts params
@@ -63,7 +63,7 @@ class SubmerchantsController < ApplicationController
         puts error.code
         puts error.message
       end
-      
+
     end
 
   end
@@ -74,9 +74,6 @@ class SubmerchantsController < ApplicationController
 
   def edit
     @submerchant = Braintree::MerchantAccount.find(params[:id])
-    #use the secure http method for faux password login
-    #create a page where sub-merchant puts in their id, then that id is stored in a current_sub method
-    #current sub is then used with submerchant.find(current_sub)...or something like that...
   end
 
   def update
