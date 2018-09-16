@@ -42,7 +42,7 @@ class SubmerchantsController < ApplicationController
         :routing_number => params[:merchant_account_params][:routing_number]
       },
       :id => params[:merchant_account_params][:id],
-      :master_merchant_account_id => "YourMasterMerchantAccount", #your master merchant ID goes here
+      :master_merchant_account_id => "buzzinc", #your master merchant ID goes here
       :tos_accepted => params[:merchant_account_params][:tos]
     }
     puts params

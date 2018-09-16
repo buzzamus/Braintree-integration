@@ -31,6 +31,10 @@
   braintree.dropin.create({
     authorization: client_token,
     container: '#bt-dropin',
+    venmo: {},
+    threeDSecure: {
+      amount: '10.00',
+    },
     paypal: {
     flow: 'vault'
     }
@@ -41,6 +45,11 @@
       instance.requestPaymentMethod(function (err, payload) {
         if (err) {
           console.log('Error', err);
+        }
+
+        if (payload.liabilityShifted || payload.type !== 'CreditCard') {
+          document.querySelector('#nonce').value = payload.nonce;
+          form.submit();
         }
         // send nonce to server
         document.querySelector('#nonce').value = payload.nonce;

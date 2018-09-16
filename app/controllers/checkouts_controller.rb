@@ -17,7 +17,10 @@ class CheckoutsController < ApplicationController
       amount: @amount,
       payment_method_nonce: nonce,
       :options => {
-        :submit_for_settlement => true
+        :submit_for_settlement => true,
+        :three_d_secure => {
+          :required => true
+        }
       }
     )
 
