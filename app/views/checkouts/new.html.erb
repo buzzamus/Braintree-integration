@@ -31,6 +31,9 @@
   braintree.dropin.create({
     authorization: client_token,
     container: '#bt-dropin',
+    dataCollector: {
+      paypal: true
+    },
     venmo: {},
     threeDSecure: {
       amount: '10.00',
